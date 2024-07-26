@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
-header, /* tu que estiver no cabeçalho usará esta fonte */
+header, /* tudo que estiver no cabeçalho usará esta fonte */
 section h2,
 section h3,
 form button {
-    font-family: "Bungee", cursive;
+    font-family: "Rowdies", sans-serif;
     font-weight: normal; /* deixa a fonte menos "gordinha" */
 }
 
@@ -37,6 +37,7 @@ header nav li a {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
+    height: auto;
 }
 
 header .container,
@@ -47,7 +48,7 @@ section .container { /* deixando a imagem da loja e o texto lado a lado */
 }
 
 .brands-list img {
-    height: 24px; /* altura máxima das imagens das brands */
+    height: 32px; /* altura máxima das imagens das brands */
 }
 
 .brands-list li {
@@ -70,14 +71,20 @@ section h2 {
 
 section p {
     margin-bottom: 8px; /* margem entre os parágrafos */
+    text-align: justify;
 }
 
 .store-front { /* criado uma classe para que apenas a imagem da loja crie margem de 32px, excluindo as img das brands */
     margin-right: 32px; /* margem de 32px à direita da img */
+    width: 400px;
+    height: 600px;
+    object-fit: cover; 
+    border-radius: 4%;
 }
 
-.social-links img {
-    height: 24px;
+.social-links img,
+.projects-links img {
+    height: 32px;
 }
 
 .social-links li { /* deixando as img lado a lado e com margem a direita de 8px */
@@ -85,8 +92,26 @@ section p {
     margin-right: 8px;
 }
 
-.social-links li a { /*por padrão a text-decoration vem underline */
+.projects-links li {
+    list-style: none; /* removeu o ponto 'estilo lista' do lado da imagem do github */
+}
+
+.social-links li a,
+.projects-links li a { /*por padrão a text-decoration vem underline */
     text-decoration: none; /* retira o underline */
+}
+
+.whatsapp {
+    position: fixed;
+    list-style: none; /* Remove o estilo de lista */
+    bottom: 40px; /* Ajuste a distância do fundo da tela */
+    right: 200px;  /* Ajuste a distância do lado direito da tela */
+}
+
+.whatsapp img {
+    width: 64px;
+    height: 64px;
+    display: flex;
 }
 
 #contact .container {
@@ -120,6 +145,7 @@ form button {
     background-color: #182c61;
     color: #ecf0f1;
     border: none;
+    border-radius: 4%;
     cursor: pointer; /* muda o cursor ao passar o mouse por cima do button */
 }
 
