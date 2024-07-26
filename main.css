@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, /* tu que estiver no cabeçalho usará esta fonte */
+section h2,
+section h3,
+form button {
+    font-family: "Bungee", cursive;
+    font-weight: normal; /* deixa a fonte menos "gordinha" */
+}
+
+body, input, textarea {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    padding: 16px 0;
+    background-color: #182c61;
+    color: #ecf0f1;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+header nav li a {
+    color: #ecf0f1;
+    text-decoration: none; /* retira o underline dos links do menu navegação */
+}
+
+.container { /* faz com que o cabeçalho ocupe 1280px não utilize tela maior */
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container,
+section .container { /* deixando a imagem da loja e o texto lado a lado */
+    display: flex; /* coloca o título do site e menu lado a lado */
+    align-items: center; /* centraliza na vertical */
+    justify-content: space-between; /* deixa o menu de navegação para o lado */
+}
+
+.brands-list img {
+    height: 24px; /* altura máxima das imagens das brands */
+}
+
+.brands-list li {
+    display: inline; /* deixa as imagens das brands lado a lado */
+    margin-right: 8px;
+}
+
+section .container { /* sobrescreve a propriedade aling-items*/
+    align-items: flex-start;
+}
+
+section {
+    padding: 24px 0; /* criando espaçamento de 24px na parte sup. e inf. laterais de 0 */
+    color: #182c61;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+section p {
+    margin-bottom: 8px; /* margem entre os parágrafos */
+}
+
+.store-front { /* criado uma classe para que apenas a imagem da loja crie margem de 32px, excluindo as img das brands */
+    margin-right: 32px; /* margem de 32px à direita da img */
+}
+
+.social-links img {
+    height: 24px;
+}
+
+.social-links li { /* deixando as img lado a lado e com margem a direita de 8px */
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-links li a { /*por padrão a text-decoration vem underline */
+    text-decoration: none; /* retira o underline */
+}
+
+#contact .container {
+    display: block;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-between; /* aplica o espaçamento de forma igualitaria entre as seções de contatos*/
+}
+
+form input, /* padroniza a área do fale conosco */
+form textarea,
+form button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form textarea { /* não permite que o usuario altere o tamanho da texarea */
+    resize: none;
+    height: 180px;
+}
+
+section h3 {
+    margin-bottom: 16px; /* cria margem nos h3 dos contatos */
+}
+
+form button {
+    background-color: #182c61;
+    color: #ecf0f1;
+    border: none;
+    cursor: pointer; /* muda o cursor ao passar o mouse por cima do button */
+}
+
+form button:hover { /* altera a cor ao passar o mouse */
+    background-color: #405dad;
+}
+
+input:focus, textarea:focus { /* altera a cor da borda quando estiver em focus todos os input e textarea */
+    outline-color: #182c61;
+}
+
+footer {
+    background-color: #182c61;
+    color: #ecf0f1;
+    padding: 16px 0;
+}
